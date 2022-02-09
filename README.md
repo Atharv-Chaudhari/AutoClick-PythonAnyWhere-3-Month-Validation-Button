@@ -10,7 +10,7 @@ Useful for people who host web apps on PythonAnyWhere
 
 In Code driver.get("YOUR_URL")
 
-YOUR_URL="You have to open account dashboard section as normally then open web section tab copy url and paste it in incognito tab it will open login window not copy the url you got from incognito tab and paste it in code"
+YOUR_URL="You have to open account dashboard section as normally, then open web section tab copy url and paste it in incognito tab it will open login window, now copy the url you got from incognito tab and paste it in code"
 
 ## Sample Execution Process :-
 
