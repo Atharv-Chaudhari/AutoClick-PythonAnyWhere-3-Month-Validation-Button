@@ -7,7 +7,7 @@ import schedule
 import pandas as pd
 import os
 
-def fun(a,b):
+def fun(a,b,c):
     user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 
     options = webdriver.ChromeOptions()
@@ -27,7 +27,7 @@ def fun(a,b):
 
     driver = webdriver.Chrome(options=options)
 
-    driver.get("PYTHONANYWHERE_WEB_URL")
+    driver.get(c)
 
     element = driver.find_element(By.ID, "id_auth-username")
     element.send_keys(a)
@@ -40,9 +40,9 @@ def fun(a,b):
     driver.close()
 
 def fun_data():
-    data=pd.read_csv(os.environ['url'])
+    data=pd.read_csv(os.environ['url']) #Get data from csv
     for i in range(data.shape[0]):
-        fun(str(data.iloc[i]["UserName/Email"]),str(data.iloc[0]["Password"]))
+        fun(str(data.iloc[i]["UserName/Email"]),str(data.iloc[0]["Password"]),str(data.iloc[0]["URL"]))
 
 schedule.every().monday.do(fun_data)
 
