@@ -27,7 +27,7 @@ def fun(a,b):
 
     driver = webdriver.Chrome(options=options)
 
-    driver.get("https://www.pythonanywhere.com/login/?next=/user/InfySOARS/webapps/")
+    driver.get("PYTHONANYWHERE_WEB_URL")
 
     element = driver.find_element(By.ID, "id_auth-username")
     element.send_keys(a)
