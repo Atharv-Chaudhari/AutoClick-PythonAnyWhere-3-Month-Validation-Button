@@ -24,7 +24,7 @@ def fun():
 
     driver = webdriver.Chrome(executable_path='./chromedriver.exe', options=options)
 
-    driver.get("https://www.pythonanywhere.com/login/?next=/user/InfySOARS/webapps/")
+    driver.get("YOUR_URL_OF PROJECT_WEB_SECTION")
 
     element = driver.find_element(By.ID, "id_auth-username")
     element.send_keys("YOUR_USERNAME or YOUR_EMAIL")
